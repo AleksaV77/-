@@ -1,4 +1,5 @@
 class Product:
+    """Содержит данные о товаре: название, описание, цену, количество в наличии"""
     name: str
     description: str
     price: float
