@@ -1,4 +1,5 @@
 class Category:
+    """Содержит данные о товаре: название, описание, список товаров категории"""
     name: str
     description: str
     products: list
