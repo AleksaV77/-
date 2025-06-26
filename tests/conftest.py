@@ -56,6 +56,19 @@ def category_3():
     )
 
 @pytest.fixture
+def add_product_1():
+    return (
+        'Samsung Galaxy S23 Ultra, 180000.0 руб. Остаток: 5\n'
+        'Iphone 15, 210000.0 руб. Остаток: 8\n'
+        'Xiaomi Redmi Note 11, 31000.0 руб. Остаток: 14\n'
+    )
+
+@pytest.fixture
+def add_product_2():
+    return 'Xiaomi Redmi Note 10, 15000.0 руб. Остаток: 5\n'
+
+
+@pytest.fixture
 def product_1():
     return Product(
         "Xiaomi Redmi Note 11", "1024GB, Синий", 31000.0, 14)
@@ -64,3 +77,17 @@ def product_1():
 def product_2():
     return Product(
         "Xiaomi Redmi Note 10", "", 15000.0, 5)
+
+@pytest.fixture
+def product_3():
+    return Product(
+        "Samsung Galaxy S23 Ultra", "256GB, Серый цвет, 200MP камера", -50.0, 5)
+
+@pytest.fixture
+def product_dict():
+    return {
+        "name": "Samsung Galaxy S23 Ultra",
+        "description": "256GB, Серый цвет, 200MP камера",
+        "price": 170000.0,
+        "quantity": 3
+    }
