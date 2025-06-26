@@ -8,13 +8,13 @@ class Product:
     def __init__(self, name, description, price, quantity):
         self.name = name
         self.description = description
-feature/homework_14_2
         self.__price = price
         self.quantity = quantity
 
     @classmethod
     def new_product(cls, product_dict):
         """Взвращает созданный объект класса Product"""
+
         name = product_dict["name"]
         description = product_dict["description"]
         price = product_dict["price"]
@@ -37,8 +37,5 @@ feature/homework_14_2
                 print('Цена осталась прежней')
         else:
             print('Цена осталась прежней')
-=======
-        self.price = price
-        self.quantity = quantity
 
-develop
+        self.__price = new_price
