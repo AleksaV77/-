@@ -14,6 +14,7 @@ def test_category_init(category_1, category_2, category_3):
     assert category_1.product_count == 19
     assert category_2.product_count == 19
     assert category_3.product_count == 19
+feature/homework_14_2
 
 def test_products(category_1, category_2):
     assert (category_1.products ==
@@ -31,3 +32,5 @@ def test_add_product(category_1, category_3, add_product_1, add_product_2, produ
     assert category_1.products == add_product_1
     category_3.add_product(product_2)
     assert category_3.products == add_product_2
+=======
+develop

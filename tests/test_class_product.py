@@ -11,6 +11,7 @@ def test_product_init(product_1, product_2):
     assert product_2.description == ""
     assert product_2.price == 15000.0
     assert product_2.quantity == 5
+feature/homework_14_2
 
 def test_new_product(product_dict):
     product_4 = Product.new_product(product_dict)
@@ -32,3 +33,5 @@ def test_price_user(capsys, product_3):
 def test_price_setter(product_2):
     product_2.price = 15000.0
     assert product_2.price == 15000.0
+=======
+ develop

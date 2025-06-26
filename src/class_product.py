@@ -8,6 +8,7 @@ class Product:
     def __init__(self, name, description, price, quantity):
         self.name = name
         self.description = description
+feature/homework_14_2
         self.__price = price
         self.quantity = quantity
 
@@ -36,3 +37,8 @@ class Product:
                 print('Цена осталась прежней')
         else:
             print('Цена осталась прежней')
+=======
+        self.price = price
+        self.quantity = quantity
+
+develop
