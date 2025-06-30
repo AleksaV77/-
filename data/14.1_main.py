@@ -1,3 +1,4 @@
+from unicodedata import category
 
 from src.class_category import Category
 from src.class_product import Product
@@ -21,7 +22,12 @@ if __name__ == "__main__":
     product4 = Product("55\" QLED 4K", "Фоновая подсветка", 123000.0, 7)
     category1.add_product(product4)
     print(category1.products)
-    print(category1.product_count)
+
+    print(str(category1))
+
+    sum_product1 = product1 + product2
+    sum_product2 = product3 + product4
+    print(sum_product1 + sum_product2)
 
     new_product_dict = {"name": "Samsung Galaxy S23 Ultra", "description": "256GB, Серый цвет, 200MP камера", "price": 170000.0,
          "quantity": 5}

@@ -56,6 +56,20 @@ def category_3():
     )
 
 @pytest.fixture
+def category_4():
+    return Category(
+        name="Смартфоны",
+        description="Смартфоны",
+        products=[
+            Product(
+                "Iphone 15",
+                "512GB, Gray space",
+                210000.0,
+                8)
+        ]
+    )
+
+@pytest.fixture
 def add_product_1():
     return (
         'Samsung Galaxy S23 Ultra, 180000.0 руб. Остаток: 5\n'
