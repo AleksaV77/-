@@ -2,6 +2,8 @@ import pytest
 
 from src.class_category import Category
 from src.class_product import Product
+from src.class_smartphone import Smartphone
+from src.class_lawngrass import LawnGrass
 
 
 @pytest.fixture
@@ -105,3 +107,28 @@ def product_dict():
         "price": 170000.0,
         "quantity": 3
     }
+
+@pytest.fixture
+def test_class_smartphone():
+    return Smartphone(
+        "Iphone", "512GB, Gray space", 210000.0, 8, "Apple A16 Bionic",
+    "Iphone 15", "256 ГБ", "black")
+
+@pytest.fixture
+def test_class_smartphone_2():
+    return Smartphone(
+        "Samsung", "200MP камера", 180000.0, 5, "Android 13",
+    "Galaxy S23 Ultra", "256 GB", "black")
+
+
+@pytest.fixture
+def test_class_lawn_grass():
+    return LawnGrass(
+        "Газонная трава", "спортивный Канада Грин", 3000.0, 8, "Canada",
+    "15", "green")
+
+@pytest.fixture
+def test_class_lawn_grass_2():
+    return LawnGrass(
+        "Газонная трава", "Городской газон", 4000.0, 5, "Russia",
+    "10", "green")

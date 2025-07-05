@@ -1,6 +1,9 @@
+from itertools import product
+
 from unicodedata import category
 
 from src.class_category import Category
+from src.class_lawngrass import LawnGrass
 from src.class_product import Product
 
 from src.class_product import Product

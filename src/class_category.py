@@ -22,8 +22,11 @@ class Category:
 
     def add_product(self, product: Product):
         """метод для добавления товаров"""
-        self.__products.append(product)
-        Category.product_count += product.quantity
+        if isinstance(product, Product):
+            self.__products.append(product)
+            Category.product_count += product.quantity
+        else:
+            raise TypeError
 
     @property
     def products(self):
