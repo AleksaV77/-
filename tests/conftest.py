@@ -132,3 +132,17 @@ def test_class_lawn_grass_2():
     return LawnGrass(
         "Газонная трава", "Городской газон", 4000.0, 5, "Russia",
     "10", "green")
+
+@pytest.fixture
+def user_without_quantity():
+    return Category(
+        name="Смартфоны",
+        description="Смартфоны",
+        products=[
+            Product(
+                "Iphone 15",
+                "512GB, Gray space",
+                0.0,
+                0)
+        ]
+    )

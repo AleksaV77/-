@@ -1,4 +1,9 @@
+from itertools import product
+
+from unicodedata import category
+
 from src.class_product import Product
+from src.exception import ZeroQuantity
 
 
 class Category:
@@ -23,8 +28,17 @@ class Category:
     def add_product(self, product: Product):
         """метод для добавления товаров"""
         if isinstance(product, Product):
-            self.__products.append(product)
-            Category.product_count += product.quantity
+            try:
+                if product.quantity == 0:
+                    raise ZeroQuantity("Нельзя добавить товар с нулевым количеством")
+            except ZeroQuantity as e:
+                print(str(e))
+            else:
+                self.__products.append(product)
+                Category.product_count += product.quantity
+                print("Товар добавлен")
+            finally:
+                print("Обработка добавления товара завершена")
         else:
             raise TypeError
 
@@ -35,3 +49,14 @@ class Category:
         for product in self.__products:
             products += f"{str(product)}\n"
         return products
+
+    @property
+    def category_in_products(self):
+        return self.__products
+
+    def average_price_tag(self):
+        """Подсчитывает средний ценник всех товаров"""
+        try:
+            return sum([product.price for product in self.__products]) / len(self.__products)
+        except ZeroDivisionError:
+            return 0
