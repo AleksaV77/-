@@ -32,7 +32,7 @@ if __name__ == "__main__":
     sum_product2 = product3 + product4
     print(sum_product1 + sum_product2)
 
-    new_product_dict = {"name": "Samsung Galaxy S23 Ultra", "description": "256GB, Серый цвет, 200MP камера", "price": 170000.0,
+    new_product_dict = {"name": "Samsung Galaxy S23 Ultra", "description": "256GB, Серый цвет, 200MP камера", "price": 0.0,
          "quantity": 5}
 
     new_product = Product.new_product(new_product_dict)
